@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Te amo</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+    }
+
+    .corazon {
+      font-size: 5em;
+      position: absolute;
+      top: 40%;
+    }
+
+    .izq {
+      left: -150px;
+      animation: moverIzq 3s forwards ease-in-out;
+      color: #e60073;
+    }
+
+    .der {
+      right: -150px;
+      animation: moverDer 3s forwards ease-in-out;
+      color: #ff3366;
+    }
+
+    @keyframes moverIzq {
+      from { left: -150px; }
+      to   { left: 45%; }
+    }
+
+    @keyframes moverDer {
+      from { right: -150px; }
+      to   { right: 45%; }
+    }
+
+    .mensaje {
+      position: absolute;
+      bottom: 20%;
+      font-size: 3em;
+      color: #e60073;
+      text-shadow: 2px 2px 5px #ff99cc;
+      opacity: 0;
+      animation: aparecer 3s forwards ease-in-out;
+      animation-delay: 3s;
+    }
+
+    @keyframes aparecer {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="corazon izq">❤️</div>
+  <div class="corazon der">❤️</div>
+  <div class="mensaje">💖 Te amo 💖</div>
+</body>
+</html>
